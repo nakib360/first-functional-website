@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation for Bangladesh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+        body{
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- header section -->
+    <header id="header" class="h-32 pb-7 bg-[#F9F7F3] fixed top-0 left-0 w-full  flex  justify-between  items-center px-4 md:px-28 lg:px-28 transition-all duration-300">
+        <button id="blog" class="h-10 w-24 text-black font-bold bg-[#B4F461] rounded-lg text-sm md:h-12 md:w-28">Blog</button>
+    
+        <div class="flex items-center">
+            <img class="h-8 w-8 mr-2" src="assets/logo.png" alt="">
+            <p class="text-sm font-semibold">Donate Bangladesh</p>
+        </div>
+    
+        <div class="flex items-center">
+            <img class="h-6 w-6 mr-2" src="assets/coin.png" alt="">
+            <p class="text-sm md:text-base text-black font-bold"><span id="balance">1756000000</span> BDT</p>
+        </div>
+    </header>
+    
+    <div class="flex justify-center items-center mt-40 "> <!-- mt-24 to avoid header overlap -->
+        <button id="donation" class="mr-2 h-10 md:h-12 w-28 border-slate-400 bg-white border-2 text-black font-bold hover:border-none hover:bg-[#B4F461] rounded-lg text-sm px-2">Donation</button>
+        <button id="history" class="ml-2 h-10 md:h-12 w-28 border-slate-400 bg-white border-2 text-black font-bold hover:border-none hover:bg-[#B4F461] rounded-lg text-sm px-2">History</button>
+    </div>
+
+    <!-- body -->
+    <main id="donate-box" class="mt-10  justify-center flex-col items-center px-5 md:px-36 lg:px-36 hidden">
+        <!-- first donation feild -->
+        <div class="border border-slate-300 rounded-xl px-5 py-5 flex flex-col md:flex-row lg:flex-row  justify-between items-center">
+            <img class="" src="assets/noakhali.png" alt="">
+            <div class="ml-0 md:ml-5 mt-5 md:mt-0 lg:mt-0">
+                <div class="inline-flex justify-center items-center bg-slate-300  h-10 rounded-xl px-2 ">
+                    <img src="assets/coin.png" alt="">
+                    <p class="text-sm md:text-base text-black font-bold ml-2"><span id="first-donation">0</span> BDT</p>
+                </div>
+                <p class="mt-5 font-bold text-black">Donate for Flood at Noakhali, Bangladesh</p>
+                <p class="mt-5 text-sm text-slate-600 text-justify "> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                <input id="first-donation-velue" class="h-14 mt-10 w-full border-2 px-3 focus:outline-none rounded-xl border-slate-400 " placeholder="Write Donation Amount" type="text">
+                <button id="first-donation-button" class="bg-[#B4F461] w-full h-12 mt-5 rounded-xl ">Donate Now</button>
+            </div>
+        </div>
+
+        <!-- second donation feield -->
+        <div class="border border-slate-300 rounded-xl px-5 py-5 flex flex-col md:flex-row lg:flex-row  justify-between items-center mt-10">
+            <img class="" src="assets/feni.png" alt="">
+            <div class="ml-0 md:ml-5 mt-5 md:mt-0 lg:mt-0">
+                <div class="inline-flex justify-center items-center bg-slate-300  h-10 rounded-xl px-2">
+                    <img src="assets/coin.png" alt="">
+                    <p class="text-sm md:text-base text-black font-bold ml-2"><span id="second-donation">600</span> BDT</p>
+                </div>
+                <p class="mt-5 font-bold text-black">Donate for Flood at Noakhali, Bangladesh</p>
+                <p class="mt-5 text-sm text-slate-600 text-justify "> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                <input id="second-donation-velue" class="h-14 mt-10 w-full border-2 px-3 focus:outline-none rounded-xl border-slate-400 " placeholder="Write Donation Amount" type="text">
+                <button id="second-donation-button" class="bg-[#B4F461] w-full h-12 mt-5 rounded-xl ">Donate Now</button>
+            </div>
+        </div>
+
+        <!-- third donation feield -->
+        <div class="border border-slate-300 rounded-xl px-5 py-5 flex flex-col md:flex-row lg:flex-row  justify-between items-center mt-10">
+            <img class="" src="assets/quota-protest.png" alt="">
+            <div class="ml-0 md:ml-5 mt-5 md:mt-0 lg:mt-0">
+                <div class="inline-flex justify-center items-center bg-slate-300  h-10 rounded-xl px-2">
+                    <img src="assets/coin.png" alt="">
+                    <p class="text-sm md:text-base text-black font-bold ml-2"><span id="third-donation">2400</span> BDT</p>
+                </div>
+                <p class="mt-5 font-bold text-black">Aid for Injured in the Quota Movement</p>
+                <p class="mt-5 text-sm text-slate-600 text-justify "> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                <input id="third-donation-velue" class="h-14 mt-10 w-full border-2 px-3 focus:outline-none rounded-xl border-slate-400 " placeholder="enter your amount" type="text">
+                <button id="third-donation-button" class="bg-[#B4F461] w-full h-12 mt-5 rounded-xl ">Donate Now</button>
+            </div>
+        </div>
+    </main>
+    
+    <main id="history-box" class="mt-10  justify-center flex-col items-center px-10">
+        <!-- <div class="border border-slate-500 rounded-xl px-10 py-10">
+            <p class="text-black font-bold text-sm">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</p>
+            <p class="text-slate-500 text-[12px]">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+        </div> -->
+    </main>
+
+    <main id="FAQ" class="px-10 my-10 hidden">
+        <div>
+            <div class="flex items-center">
+            <p class="text-3xl font-bold">Important FAQ</p>
+            <img class="h-16 w-16 ml-2" src="assets/Q&A-Quastion-and-Answer-Royalty-Free-Animated-Icon-GIF-1080px-after-effects-project.gif" alt="">
+        </div>
+        </div>
+
+        <div id="border-box1" class=" w-full border border-slate-400 rounded-xl px-10 py-10 mt-10 ">
+            <div id="F&Q-box1" class="flex justify-between items-center">
+                <p class="text-xl">What is the documant objact model?</p>
+                <img id="arrow1" class="h-3 w-3 rotate-90" src="assets/arrow.png" alt="">
+            </div>
+            <p id="Answer1" class="text-sm text-slate-400 mt-10 hidden">The Document Object Model (DOM) represents HTML or XML documents as a tree structure, allowing programmatic manipulation of content.</p>
+        </div>
+
+
+        <div id="border-box2" class=" w-full border border-slate-400 rounded-xl px-10 py-10 mt-10">
+            <div id="F&Q-box2" class="flex justify-between items-center">
+                <p class="text-xl">How do you select an element from DOM?</p>
+                <img id="arrow2" class="h-3 w-3 rotate-90" src="assets/arrow.png" alt="">
+            </div>
+            <p id="Answer2" class="text-sm text-slate-400 mt-10 hidden">I use document.querySelector() for a single element or document.querySelectorAll() for multiple. Alternatively, use getElementById() or getElementsByClassName().</p>
+        </div>
+
+
+        <div id="border-box3" class=" w-full border border-slate-400 rounded-xl px-10 py-10 mt-10">
+            <div id="F&Q-box3" class="flex justify-between items-center">
+                <p class="text-xl">What is event deligation in the context of the DOM,and why is it useful?</p>
+                <img id="arrow3" class="h-3 w-3 rotate-90" src="assets/arrow.png" alt="">
+            </div>
+            <p id="Answer3" class="text-sm text-slate-400 mt-10 hidden">Event delegation allows a parent element to handle events for its children using event bubbling. It's useful for performance optimization, managing dynamically added elements, and reducing multiple event listeners in the DOM.</p>
+        </div>
+
+
+        <div id="border-box4" class=" w-full border border-slate-400 rounded-xl px-10 py-10 mt-10">
+            <div id="F&Q-box4" class="flex justify-between items-center">
+                <p class="text-xl">How do you manipulate an element's attributes and styles using the DOM?</p>
+                <img id="arrow4" class="h-3 w-3 rotate-90" src="assets/arrow.png" alt="">
+            </div>
+            <p id="Answer4" class="text-sm text-slate-400 mt-10 hidden">I use setAttribute(), getAttribute(), and removeAttribute() for attributes. Modify styles with element.style.property or manage classes using classList.add(), remove(), and toggle() for efficient DOM manipulation.</p>
+        </div>
+    </main>
+
+    <script src="js/function.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
