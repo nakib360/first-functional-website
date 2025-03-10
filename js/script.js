@@ -54,6 +54,13 @@ document.getElementById("first-donation-button").addEventListener("click", funct
                 <p class="text-slate-500 text-[12px]">Date : ${new Date()}</p>
             </div> 
         `);
+
+        if(parseFloat(document.getElementById("first-donation").innerText) === addingValue){
+            document.getElementById('alert-box').classList.remove('hidden');
+            document.getElementById('alert-box').classList.add('flex');
+        }
+        
+        
 });
 
 document.getElementById("second-donation-button").addEventListener("click", function(event){
@@ -74,6 +81,11 @@ document.getElementById("second-donation-button").addEventListener("click", func
             <p class="text-slate-500 text-[12px]">Date : ${new Date()}</p>
         </div> 
     `);
+
+    if(parseFloat(document.getElementById("second-donation").innerText) === addingValue){
+        document.getElementById('alert-box').classList.remove('hidden');
+        document.getElementById('alert-box').classList.add('flex');
+    }
 });
 
 
@@ -95,6 +107,11 @@ document.getElementById("third-donation-button").addEventListener("click", funct
             <p class="text-slate-500 text-[12px]">Date : ${new Date()}</p>
         </div> 
     `);
+
+    if(parseFloat(document.getElementById("third-donation").innerText) === addingValue){
+        document.getElementById('alert-box').classList.remove('hidden');
+        document.getElementById('alert-box').classList.add('flex');
+    }
 });
 
 
@@ -168,4 +185,9 @@ document.getElementById("blog").addEventListener("click", function(){
         document.getElementById("history").classList.remove("bg-[#B4F461]");
         document.getElementById("history").classList.add("border-slate-400", "bg-white", "border-2");
     }
-})
+});
+
+document.getElementById('close-information').addEventListener('click', function(){
+    document.getElementById('alert-box').classList.add('hidden');
+    document.getElementById('alert-box').classList.remove('flex');
+});
