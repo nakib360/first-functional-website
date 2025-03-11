@@ -48,6 +48,8 @@ document.getElementById("first-donation-button").addEventListener("click", funct
         document.getElementById("balance").innerText = cuttingValue;
         document.getElementById("first-donation").innerText = addingValue;
 
+        document.getElementById("first-donation-velue").value = '';
+
         document.getElementById("history-box").insertAdjacentHTML("beforeend", `
             <div class="border w-full border-slate-500 rounded-xl px-10 py-10 mt-5">
                 <p class="text-black font-bold text-sm">${firstDonationValue} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
@@ -75,6 +77,8 @@ document.getElementById("second-donation-button").addEventListener("click", func
     document.getElementById("balance").innerText = cuttingValue;
     document.getElementById("second-donation").innerText = addingValue;
 
+    document.getElementById("second-donation-velue").value = '';
+
     document.getElementById("history-box").insertAdjacentHTML("beforeend", `
         <div class="border w-full border-slate-500 rounded-xl px-10 py-10 mt-5">
             <p class="text-black font-bold text-sm">${secondDonationValue} Taka is Donated for famine-2024 at Boalkhali, Bangladesh</p>
@@ -100,6 +104,8 @@ document.getElementById("third-donation-button").addEventListener("click", funct
 
     document.getElementById("balance").innerText = cuttingValue;
     document.getElementById("third-donation").innerText = addingValue;
+
+    document.getElementById("third-donation-velue").value = '';
 
     document.getElementById("history-box").insertAdjacentHTML("beforeend", `
         <div class="border w-full border-slate-500 rounded-xl px-10 py-10 mt-5">
