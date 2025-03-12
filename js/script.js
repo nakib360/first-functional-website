@@ -42,24 +42,29 @@ document.getElementById("first-donation-button").addEventListener("click", funct
         const firstDonationValue = parseFloat(document.getElementById("first-donation-velue").value);
         const firstDonation = parseFloat(document.getElementById("first-donation").innerText);
 
-        const cuttingValue = mainBalance - firstDonationValue;
-        const addingValue = firstDonationValue + firstDonation;
+        if(isNaN(firstDonationValue) || mainBalance === 0 || firstDonationValue > mainBalance){
+            alert("please input a valid condition");
+            return;
+        }else{
+            const cuttingValue = mainBalance - firstDonationValue;
+            const addingValue = firstDonationValue + firstDonation;
 
-        document.getElementById("balance").innerText = cuttingValue;
-        document.getElementById("first-donation").innerText = addingValue;
+            document.getElementById("balance").innerText = cuttingValue;
+            document.getElementById("first-donation").innerText = addingValue;
 
-        document.getElementById("first-donation-velue").value = '';
+            document.getElementById("first-donation-velue").value = '';
 
-        document.getElementById("history-box").insertAdjacentHTML("beforeend", `
-            <div class="border w-full border-slate-500 rounded-xl px-10 py-10 mt-5">
-                <p class="text-black font-bold text-sm">${firstDonationValue} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
-                <p class="text-slate-500 text-[12px]">Date : ${new Date()}</p>
-            </div> 
-        `);
+            document.getElementById("history-box").insertAdjacentHTML("beforeend", `
+                <div class="border w-full border-slate-500 rounded-xl px-10 py-10 mt-5">
+                    <p class="text-black font-bold text-sm">${firstDonationValue} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
+                    <p class="text-slate-500 text-[12px]">Date : ${new Date()}</p>
+                </div> 
+            `);
 
-        if(parseFloat(document.getElementById("first-donation").innerText) === addingValue){
-            document.getElementById('alert-box').classList.remove('hidden');
-            document.getElementById('alert-box').classList.add('flex');
+            if(parseFloat(document.getElementById("first-donation").innerText) === addingValue){
+                document.getElementById('alert-box').classList.remove('hidden');
+                document.getElementById('alert-box').classList.add('flex');
+            }
         }
         
         
@@ -71,24 +76,29 @@ document.getElementById("second-donation-button").addEventListener("click", func
     const secondDonationValue = parseFloat(document.getElementById("second-donation-velue").value);
     const secondDonation = parseFloat(document.getElementById("second-donation").innerText);
 
-    const cuttingValue = mainBalance - secondDonationValue;
-    const addingValue = secondDonationValue + secondDonation;
+    if(isNaN(secondDonationValue) || mainBalance === 0 || secondDonationValue > mainBalance){
+        alert("please input a valid condition");
+        return;
+    }else {
+        const cuttingValue = mainBalance - secondDonationValue;
+        const addingValue = secondDonationValue + secondDonation;
 
-    document.getElementById("balance").innerText = cuttingValue;
-    document.getElementById("second-donation").innerText = addingValue;
+        document.getElementById("balance").innerText = cuttingValue;
+        document.getElementById("second-donation").innerText = addingValue;
 
-    document.getElementById("second-donation-velue").value = '';
+        document.getElementById("second-donation-velue").value = '';
 
-    document.getElementById("history-box").insertAdjacentHTML("beforeend", `
-        <div class="border w-full border-slate-500 rounded-xl px-10 py-10 mt-5">
-            <p class="text-black font-bold text-sm">${secondDonationValue} Taka is Donated for famine-2024 at Boalkhali, Bangladesh</p>
-            <p class="text-slate-500 text-[12px]">Date : ${new Date()}</p>
-        </div> 
-    `);
+        document.getElementById("history-box").insertAdjacentHTML("beforeend", `
+            <div class="border w-full border-slate-500 rounded-xl px-10 py-10 mt-5">
+                <p class="text-black font-bold text-sm">${secondDonationValue} Taka is Donated for famine-2024 at Boalkhali, Bangladesh</p>
+                <p class="text-slate-500 text-[12px]">Date : ${new Date()}</p>
+            </div> 
+        `);
 
-    if(parseFloat(document.getElementById("second-donation").innerText) === addingValue){
-        document.getElementById('alert-box').classList.remove('hidden');
-        document.getElementById('alert-box').classList.add('flex');
+        if(parseFloat(document.getElementById("second-donation").innerText) === addingValue){
+            document.getElementById('alert-box').classList.remove('hidden');
+            document.getElementById('alert-box').classList.add('flex');
+        }
     }
 });
 
@@ -99,24 +109,30 @@ document.getElementById("third-donation-button").addEventListener("click", funct
     const thirdDonationValue = parseFloat(document.getElementById("third-donation-velue").value);
     const thirdDonation = parseFloat(document.getElementById("third-donation").innerText);
 
-    const cuttingValue = mainBalance - thirdDonationValue;
-    const addingValue = thirdDonationValue + thirdDonation;
+    if(isNaN(thirdDonationValue) || mainBalance === 0 || thirdDonationValue > mainBalance){
+        alert("please input a valid condition");
+        return;
+    }else {
 
-    document.getElementById("balance").innerText = cuttingValue;
-    document.getElementById("third-donation").innerText = addingValue;
+        const cuttingValue = mainBalance - thirdDonationValue;
+        const addingValue = thirdDonationValue + thirdDonation;
 
-    document.getElementById("third-donation-velue").value = '';
+        document.getElementById("balance").innerText = cuttingValue;
+        document.getElementById("third-donation").innerText = addingValue;
 
-    document.getElementById("history-box").insertAdjacentHTML("beforeend", `
-        <div class="border w-full border-slate-500 rounded-xl px-10 py-10 mt-5">
-            <p class="text-black font-bold text-sm">${thirdDonationValue} Taka is Aid for Injured in the Quota Movement</p>
-            <p class="text-slate-500 text-[12px]">Date : ${new Date()}</p>
-        </div> 
-    `);
+        document.getElementById("third-donation-velue").value = '';
 
-    if(parseFloat(document.getElementById("third-donation").innerText) === addingValue){
-        document.getElementById('alert-box').classList.remove('hidden');
-        document.getElementById('alert-box').classList.add('flex');
+        document.getElementById("history-box").insertAdjacentHTML("beforeend", `
+            <div class="border w-full border-slate-500 rounded-xl px-10 py-10 mt-5">
+                <p class="text-black font-bold text-sm">${thirdDonationValue} Taka is Aid for Injured in the Quota Movement</p>
+                <p class="text-slate-500 text-[12px]">Date : ${new Date()}</p>
+            </div> 
+        `);
+
+        if(parseFloat(document.getElementById("third-donation").innerText) === addingValue){
+            document.getElementById('alert-box').classList.remove('hidden');
+            document.getElementById('alert-box').classList.add('flex');
+        }
     }
 });
 
