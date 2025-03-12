@@ -35,15 +35,18 @@ document.getElementById("donation").addEventListener("click", function () {
     document.getElementById("FAQ").classList.add("hidden");
 });
 
-const mainBalance = parseFloat(document.getElementById('balance').innerText);
+
 document.getElementById("first-donation-button").addEventListener("click", function(event){
         event.preventDefault();
 
+        let mainBalance = parseFloat(document.getElementById('balance').innerText);
         const firstDonationValue = parseFloat(document.getElementById("first-donation-velue").value);
         const firstDonation = parseFloat(document.getElementById("first-donation").innerText);
 
-        if(isNaN(firstDonationValue) || mainBalance === 0 || firstDonationValue > mainBalance){
-            alert("please input a valid condition");
+        if(isNaN(firstDonationValue) || mainBalance <= 0 || firstDonationValue > mainBalance){
+            document.getElementById("first-donation-velue").value = '';
+            document.getElementById('alert-cencal-box').classList.remove('hidden');
+            document.getElementById('alert-cencal-box').classList.add('flex');
             return;
         }else{
             const cuttingValue = mainBalance - firstDonationValue;
@@ -73,11 +76,14 @@ document.getElementById("first-donation-button").addEventListener("click", funct
 document.getElementById("second-donation-button").addEventListener("click", function(event){
     event.preventDefault();
 
+    let mainBalance = parseFloat(document.getElementById('balance').innerText);
     const secondDonationValue = parseFloat(document.getElementById("second-donation-velue").value);
     const secondDonation = parseFloat(document.getElementById("second-donation").innerText);
 
-    if(isNaN(secondDonationValue) || mainBalance === 0 || secondDonationValue > mainBalance){
-        alert("please input a valid condition");
+    if(isNaN(secondDonationValue) || mainBalance <= 0 || secondDonationValue > mainBalance){
+        document.getElementById("second-donation-velue").value = '';
+        document.getElementById('alert-cencal-box').classList.remove('hidden');
+        document.getElementById('alert-cencal-box').classList.add('flex');
         return;
     }else {
         const cuttingValue = mainBalance - secondDonationValue;
@@ -106,11 +112,14 @@ document.getElementById("second-donation-button").addEventListener("click", func
 document.getElementById("third-donation-button").addEventListener("click", function(event){
     event.preventDefault();
 
+    let mainBalance = parseFloat(document.getElementById('balance').innerText);
     const thirdDonationValue = parseFloat(document.getElementById("third-donation-velue").value);
     const thirdDonation = parseFloat(document.getElementById("third-donation").innerText);
 
-    if(isNaN(thirdDonationValue) || mainBalance === 0 || thirdDonationValue > mainBalance){
-        alert("please input a valid condition");
+    if(isNaN(thirdDonationValue) || mainBalance <= 0 || thirdDonationValue > mainBalance){
+        document.getElementById("third-donation-velue").value = '';
+        document.getElementById('alert-cencal-box').classList.remove('hidden');
+        document.getElementById('alert-cencal-box').classList.add('flex');
         return;
     }else {
 
@@ -212,4 +221,9 @@ document.getElementById("blog").addEventListener("click", function(){
 document.getElementById('close-information').addEventListener('click', function(){
     document.getElementById('alert-box').classList.add('hidden');
     document.getElementById('alert-box').classList.remove('flex');
+});
+
+document.getElementById('close-cencal-information').addEventListener('click', function(){
+    document.getElementById('alert-cencal-box').classList.add('hidden');
+    document.getElementById('alert-cencal-box').classList.remove('flex');
 });

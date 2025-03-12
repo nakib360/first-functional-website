@@ -76,13 +76,13 @@
                 </div>
                 <p class="mt-5 font-bold text-black">Aid for Injured in the Quota Movement</p>
                 <p class="mt-5 text-sm text-slate-600 text-justify "> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
-                <input id="third-donation-velue" class="h-14 mt-10 w-full border-2 px-3 focus:outline-none rounded-xl border-slate-400 " placeholder="enter your amount" type="text">
+                <input id="third-donation-velue" class="h-14 mt-10 w-full border-2 px-3 focus:outline-none rounded-xl border-slate-400 " placeholder="Write Donation Amount" type="text">
                 <button id="third-donation-button" class="bg-[#B4F461] w-full h-12 mt-5 rounded-xl ">Donate Now</button>
             </div>
         </div>
     </main>
     
-    <!-- alert-box -->
+    <!-- alert-confirm-box -->
     <section class="">
         <div id="alert-box" class=" shadow-xl h-60 w-80 md:w-96 rounded-xl bg-slate-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 fixed flex-col justify-between items-center py-5 hidden">
            <p class="text-4xl font-bold">Congrates!</p>
@@ -91,7 +91,18 @@
            <p class="text-xl font-bold">successfully</p>
            <button id="close-information" class="h-10 w-36 text-sm rounded-xl bg-slate-200">close information</button>
         </div>
-   </section>
+    </section>
+
+    <!-- alert-faild-box -->
+    <section class="">
+        <div id="alert-cencal-box" class=" shadow-xl h-60 w-80 md:w-96 rounded-xl bg-red-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 fixed flex-col justify-between items-center py-5 hidden">
+           <p class="text-4xl font-bold">Sorry!</p>
+           <img src="assets/coin.png" alt="">
+           <p class="text-slate-500">Your donation has been cencaled</p>
+           <p class="text-xl font-bold">not success</p>
+           <button id="close-cencal-information" class="h-10 w-36 text-sm rounded-xl bg-slate-200">close information</button>
+        </div>
+    </section>
     
    <!-- history-container -->
     <main id="history-box" class="mt-10  justify-center flex-col items-center px-10">
